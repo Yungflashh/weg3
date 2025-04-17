@@ -6,7 +6,7 @@ const HeroSection = () => {
     <div className='flex justify-between items-center'>
         <div className="robot-div">
 
-            <img src={robot_img} alt="a floating robot image" />
+            <img src={robot_img} className='animate-bounce ' alt="a floating robot image" />
         </div>
 
 
