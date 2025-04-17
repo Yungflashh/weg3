@@ -18,7 +18,7 @@ const HeroSection = () => {
                 <p className='text-[32px] w-[650px]'>Decentralize Solution is the web3 standard to connect blockchain wallets to dapps</p>
                 <button>Connect Wallet</button>
                 <button>Connect Manually</button>
-{/* I AM STOPPING HERE FOR TODAY */}
+
         </div>
     </div>
   )
