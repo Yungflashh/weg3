@@ -5,17 +5,17 @@ import wallet_logo from "../../../assets/wallet_logo.jpg"
 
 const Header = () => {
   return (
-    <div className='header-container flex justify-between h-12'>
+    <div className='header-container flex justify-between p-5 '>
         <div className="logo-div">
 
-         <button className='flex'> <PiWalletFill color='#45E8FF'/> Connect Wallet</button> 
+        <button className='flex justify-center items-center border-2 border-gray-200 px-4 py-2 rounded-3xl gap-1'> <PiWalletFill color='#45E8FF'/> Connect Wallet</button> 
 
 
         </div>
 
         <div className="logo-2-div">
 
-          <img src={wallet_logo} alt="" className='w-32'/>
+          <img src={wallet_logo} alt="" className='w-38'/>
 
         </div>
     </div>

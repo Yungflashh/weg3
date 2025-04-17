@@ -1,1 +1,17 @@
+
 @import "tailwindcss";
+
+@theme {
+  --font-ubanist:'Urbanist', 'sans-serif'
+}
+
+@keyframes subtleFloat {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0px); }
+  }
+  
+  .floating-robot {
+    animation: subtleFloat 5s ease-in-out infinite;
+  }
+  
