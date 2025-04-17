@@ -8,7 +8,7 @@ const Header = () => {
     <div className='header-container flex justify-between p-5 '>
         <div className="logo-div">
 
-        <button className='flex justify-center items-center border-2 border-gray-200 px-4 py-2 rounded-3xl gap-1'> <PiWalletFill color='#45E8FF'/> Connect Wallet</button> 
+        <button className='flex justify-center items-center border-2 border-gray-200 px-4 py-2 rounded-3xl gap-1 urbanist text-[14px]'> <PiWalletFill color='#45E8FF'/> Connect Wallet</button> 
 
 
         </div>

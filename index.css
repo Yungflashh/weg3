@@ -11,6 +11,14 @@
     100% { transform: translateY(0px); }
   }
   
+body{
+    background: #F7F6FE;
+}
+  *{
+    
+    font-family: "Urbanist", sans-serif;
+
+  }
   .floating-robot {
     animation: subtleFloat 5s ease-in-out infinite;
   }
@@ -19,5 +27,6 @@
     font-family: "Urbanist", sans-serif;
     font-optical-sizing: auto;
     font-style: normal;
+    font-weight: 700;
   }
   
