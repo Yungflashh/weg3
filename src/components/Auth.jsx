@@ -1,6 +1,12 @@
 import React from 'react'
 import Card from './Card'
 import migrationImg from "../assets/migration.jpg"
+import buyingImg from "../assets/buying.jpg"
+import claimImg from "../assets/claim.jpg"
+import recoveryImg from "../assets/recovery.jpg"
+import stackingImg from "../assets/stacking.jpg"
+
+import { FaTelegramPlane } from "react-icons/fa";
 
 const Auth = () => {
   return (
@@ -8,14 +14,20 @@ const Auth = () => {
         <h2 className='text-[42px] font-bold urbanist '>AUTHENTICATION</h2>
         <p className='text-[18px]'>A decentralized platform and network that blends Blockchain with DeFi, incorporating Blockchain aspects such as non-custodial management, Micropools, rapid liquidity, and decentralized governance. Each procedure must be completed in its entirety. The authentication of wallet will be finished as follows. </p>
 
-        <section>
-            <div className="row flex">
-                  <Card icon_image={migrationImg}/>
+        <section className='flex w-[100%]'>
+            <div className="row flex flex-col w-[100%] gap-7">
+                  <Card icon_image={migrationImg} text={"Migration"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
+                  <Card icon_image={buyingImg} text={"Buying and Selling"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
+                  <Card icon_image={stackingImg} text={"Staking"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
             </div>
-            <div className="row flex">
-
+            <div className="row flex flex-col w-[100%] gap-7">
+                  <Card icon_image={migrationImg} text={"Rectification"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
+                  <Card icon_image={claimImg} text={"Claim Reward"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
+                  <Card icon_image={stackingImg} text={"Unstake"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
             </div>
-            <div className="row flex">
+            <div className="row flex flex-col w-[100%] gap-7">
+                  <Card icon_image={migrationImg} text={"Update Balance"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
+                  <Card icon_image={recoveryImg} text={"Recovery"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
 
             </div>
             <div className="row flex">
