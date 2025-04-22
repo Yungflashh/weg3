@@ -21,7 +21,7 @@
             <div className=' text-white'>
                     <p className='text-[18px] w-full'>Decentralize Solution is the web3 standard to connect blockchain wallets to dapps</p>
             </div>
-            <div className='flex justify-centerc items-center gap-5'>
+            <div className='flex justify-center items-center gap-5'>
             <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Wallet</button> 
             <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button> 
                     
