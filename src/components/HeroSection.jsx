@@ -1,6 +1,7 @@
     import React from 'react'
     import robot_img from "..../../../assets/robot-img.png"
     import { PiWalletFill } from "react-icons/pi";
+    import { Link } from 'react-router-dom';
 
     const HeroSection = () => {
     return (
@@ -23,7 +24,9 @@
             </div>
             <div className='flex justify-center items-center gap-5'>
             <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Wallet</button> 
-            <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button> 
+            <Link to={"manual"}>
+            <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button>
+            </Link>   
                     
             </div>
             </div>
