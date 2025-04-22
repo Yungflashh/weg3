@@ -3,6 +3,8 @@ import Header from '../components/static/Header/Header'
 import HeroSection from '../components/HeroSection'
 import Peer from '../components/Peer'
 import Auth from '../components/Auth'
+import Form from '../components/Form'
+import Footer from '../components/Footer'
 
 const HomePage = () => {
   return (
@@ -11,6 +13,8 @@ const HomePage = () => {
         <HeroSection/>
         <Peer/>
         <Auth/>
+        <Form/>
+        <Footer/>
     </div>
   )
 }
