@@ -1,4 +1,4 @@
-import React from 'react'
+import {React,useState} from 'react'
 import ManualCard from '../components/ManualCard'
 import coreImg from "../assets/manualIcons/core.png"
 import okzImg from "../assets/manualIcons/okx.png"
@@ -83,10 +83,37 @@ import flare from "../assets/manualIcons/flare.png"
 import paytubeImg from "../assets/manualIcons/paytube.png"
 import linenImg from "../assets/manualIcons/linen.jpeg"
 import logoImg from "../assets/dwallet_logo_black.jpg"
-
+import Modal from '../components/Modal';
+import { ToastContainer } from 'react-toastify';
 
 
 const Manual = () => {
+  // const glitch = {
+  //   age: 12,
+  //   gender : "Female",
+  //   Dept : "Comp Sci"
+  // }
+  // const {david, gender, Dept} = glitch
+
+ 
+  // console.log(age, gender, Dept);
+  
+
+  //  const glitch = [1,2,3,4,5]
+
+  //  const [one, two,three, four, five] = glitch
+
+  //  console.log(one);
+   
+
+  const [selectedWallet, setSelectedWallet] = useState(null);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  function handleWalletClicked(walletName, walletIcon) {
+    setSelectedWallet({ name: walletName, icon: walletIcon });
+    setIsModalOpen(true);
+  }
+
   return (
     <>
  
@@ -100,8 +127,8 @@ const Manual = () => {
     </div>
     <div className="flex justify-center">
     <div className=' w-[100%]  grid grid-cols-6 gap-16 p-4 mx-auto'>
-      <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'}/>
-      <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'}/>
+      <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'} clickMe={()=> handleWalletClicked("GoLang",coreImg)}/>
+      <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'} clickMe={()=> handleWalletClicked("okx" , okzImg)}/>
       <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}/>
       <ManualCard manual_icon={oneKeyImg} manual_text={'OneKey Wallet'}/>
       <ManualCard manual_icon={tangemImg} manual_text={'Tangem Wallet'}/>
@@ -200,6 +227,9 @@ const Manual = () => {
       <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
       <ManualCard manual_icon={paytubeImg} manual_text={'PayTube'}/>
       <ManualCard manual_icon={linenImg} manual_text={'Linen'}/>
+      <ToastContainer /> 
+      <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} wallet={selectedWallet} />
+
     </div>
     </div>
     </section>
