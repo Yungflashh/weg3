@@ -82,12 +82,24 @@ import talkenImg from "../assets/manualIcons/talken.png"
 import flare from "../assets/manualIcons/flare.png"
 import paytubeImg from "../assets/manualIcons/paytube.png"
 import linenImg from "../assets/manualIcons/linen.jpeg"
-import tokenaryImg from "../assets/manualIcons/tokenary.jpg"
+import logoImg from "../assets/dwallet_logo_black.jpg"
+
 
 
 const Manual = () => {
   return (
-    <div>
+    <>
+ 
+    <div className=' bg-black py-3 flex items-center justify-center'>
+      <img className=' w-[160px]' src={logoImg} alt="" />
+    </div>
+    <section className="bg-gradient-to-r from-[#85C0FF] to-[#85DFFF] w-full h-full flex flex-col justify-center items-center">
+    <div className=' my-6'>
+      <h1 className='text-[44px] font-[800] text-black'>Connect Wallet</h1>
+      <p className=' text-[15px] font-[500]'>Please connect your wallet to continue</p>
+    </div>
+    <div className="flex justify-center">
+    <div className=' w-[100%]  grid grid-cols-6 gap-16 p-4 mx-auto'>
       <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'}/>
       <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'}/>
       <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}/>
@@ -189,6 +201,9 @@ const Manual = () => {
       <ManualCard manual_icon={paytubeImg} manual_text={'PayTube'}/>
       <ManualCard manual_icon={linenImg} manual_text={'Linen'}/>
     </div>
+    </div>
+    </section>
+    </>
   )
 }
 
