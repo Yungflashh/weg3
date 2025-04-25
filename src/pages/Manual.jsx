@@ -128,9 +128,9 @@ const Manual = () => {
     <div className="flex justify-center">
     <div className=' w-[100%]  grid grid-cols-6 gap-16 p-4 mx-auto'>
       <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'} 
-        clickMe={()=> handleWalletClicked("GoLang",coreImg)}/>
+        clickMe={()=> handleWalletClicked("Core Golang Cli Wallet",coreImg)}/>
       <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'} 
-        clickMe={()=> handleWalletClicked("okx" , okzImg)}/>
+        clickMe={()=> handleWalletClicked("Okx Wallet" , okzImg)}/>
       <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'} 
         clickMe={()=> handleWalletClicked("Ledger" , ledgerImg)}/>
       <ManualCard manual_icon={oneKeyImg} manual_text={'OneKey Wallet'} 
