@@ -127,106 +127,206 @@ const Manual = () => {
     </div>
     <div className="flex justify-center">
     <div className=' w-[100%]  grid grid-cols-6 gap-16 p-4 mx-auto'>
-      <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'} clickMe={()=> handleWalletClicked("GoLang",coreImg)}/>
-      <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'} clickMe={()=> handleWalletClicked("okx" , okzImg)}/>
-      <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}/>
-      <ManualCard manual_icon={oneKeyImg} manual_text={'OneKey Wallet'}/>
-      <ManualCard manual_icon={tangemImg} manual_text={'Tangem Wallet'}/>
-      <ManualCard manual_icon={myTonImg} manual_text={'MyTon Wallet'}/>
-      <ManualCard manual_icon={toneImg} manual_text={'Tonkeeper Wallet'}/>
-      <ManualCard manual_icon={tonhubImg} manual_text={'TonHub Wallet'}/>
-      <ManualCard manual_icon={electrumImg} manual_text={'Electrum Wallet'}/>
-      <ManualCard manual_icon={uniswapImg} manual_text={'UNISWAP Wallet'}/>
-      <ManualCard manual_icon={bestImg} manual_text={'Best Wallet'}/>
-      <ManualCard manual_icon={kaspiumImg} manual_text={'Kaspium Wallet'}/>
-      <ManualCard manual_icon={KaswereImg} manual_text={'Kaswere Wallet'}/>
-      <ManualCard manual_icon={kaspiumImg} manual_text={'Kaspanet Web Wallet'}/>
-      <ManualCard manual_icon={kaspiumImg} manual_text={'Kdx Wallet'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet Connect'}/>
-      <ManualCard manual_icon={trustImg} manual_text={'Trust'}/>
-      <ManualCard manual_icon={solanaImg} manual_text={'Solana Wallet'}/>
-      <ManualCard manual_icon={solfareImg} manual_text={'Solfare Wallet'}/>
-      <ManualCard manual_icon={unisatImg} manual_text={'Unisat Wallet'}/>
-      <ManualCard manual_icon={okzImg} manual_text={'okx Wallet'}/>
-      <ManualCard manual_icon={xverseImg} manual_text={'Xverse Wallet'}/>
-      <ManualCard manual_icon={magicImg} manual_text={'Magic Eden Wallet'}/>
-      <ManualCard manual_icon={leatherImg} manual_text={'Leather Wallet'}/>
-      <ManualCard manual_icon={asignaImg} manual_text={'Asigna Wallet'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet Connect'}/>
-      <ManualCard manual_icon={trustImg} manual_text={'Trust'}/>
-      <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}/>
-      <ManualCard manual_icon={metaImg} manual_text={'Metamask'}/>
-      <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}/>
-      <ManualCard manual_icon={brdImg} manual_text={'BRD Wallet'}/>
-      <ManualCard manual_icon={coinImg} manual_text={'Coinbase'}/>
-      <ManualCard manual_icon={saitaImg} manual_text={'Saitamask Wallet'}/>
-      <ManualCard manual_icon={terraImg} manual_text={'Terra Station'}/>
-      <ManualCard manual_icon={phantomImg} manual_text={'Phantom Wallet'}/>
-      <ManualCard manual_icon={cosmosImg} manual_text={'Cosmos Station'}/>
-      <ManualCard manual_icon={exodusImg} manual_text={'Exodus Wallet'}/>
-      <ManualCard manual_icon={rainbowImg} manual_text={'Rainbow'}/>
-      <ManualCard manual_icon={argentImg} manual_text={'Argent'}/>
-      <ManualCard manual_icon={binanceImg} manual_text={'Binance Chain'}/>
-      <ManualCard manual_icon={safemoonImg} manual_text={'Safemoon'}/>
-      <ManualCard manual_icon={gnosisImg} manual_text={'Gnosis Safe'}/>
-      <ManualCard manual_icon={defiImg} manual_text={'DeFi'}/>
-      <ManualCard manual_icon={pillarImg} manual_text={'Pillar'}/>
-      <ManualCard manual_icon={imtokenImg} manual_text={'imToken'}/>
-      <ManualCard manual_icon={ontoImg} manual_text={'ONTO'}/>
-      <ManualCard manual_icon={tokenImg} manual_text={'TokenPocket'}/>
-      <ManualCard manual_icon={aaveImg} manual_text={'Aave'}/>
-      <ManualCard manual_icon={digitexImg} manual_text={'Digitex'}/>
-      <ManualCard manual_icon={portisImg} manual_text={'Portis'}/>
-      <ManualCard manual_icon={formaticImg} manual_text={'Formatic'}/>
-      <ManualCard manual_icon={mathImg} manual_text={'MathWallet'}/>
-      <ManualCard manual_icon={bitpayImg} manual_text={'BitPay'}/>
-      <ManualCard manual_icon={ledgerLiveImg} manual_text={'Ledger Live'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={dharmaImg} manual_text={'Dharma'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={eidooImg} manual_text={'Eidoo'}/>
-      <ManualCard manual_icon={mykeyImg} manual_text={'MYKEY'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={trustvaultImg} manual_text={'TrustVault'}/>
-      <ManualCard manual_icon={atomicImg} manual_text={'Atomic'}/>
-      <ManualCard manual_icon={coin98Img} manual_text={'Coin98'}/>
-      <ManualCard manual_icon={tronImg} manual_text={'Tron'}/>
-      <ManualCard manual_icon={aliceImg} manual_text={'Alice'}/>
-      <ManualCard manual_icon={alphaImg} manual_text={'AlphaWallet'}/>
-      <ManualCard manual_icon={dcentImg} manual_text={"D'CENT"}/>
-      <ManualCard manual_icon={zelcoreImg} manual_text={'ZelCore'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={coinmoniImg} manual_text={'Coinmoni'}/>
-      <ManualCard manual_icon={gridImg} manual_text={'GridPlus'}/>
-      <ManualCard manual_icon={cybavoImg} manual_text={'CYBAVO'}/>
-      <ManualCard manual_icon={takebaryImg} manual_text={'Tokenary'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={spatiumImg} manual_text={'Spatium'}/>
-      <ManualCard manual_icon={safepalImg} manual_text={'SafePal'}/>
-      <ManualCard manual_icon={infinitoImg} manual_text={'Infinito'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={ownbitImg} manual_text={'Ownbit'}/>
-      <ManualCard manual_icon={easyImg} manual_text={'EasyPocket'}/>
-      <ManualCard manual_icon={bridgeImg} manual_text={'Bridge Wallet'}/>
-      <ManualCard manual_icon={sparkImg} manual_text={'Spark Point'}/>
-      <ManualCard manual_icon={viaImg} manual_text={'Via Wallet'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={peakefi} manual_text={'PEAKDEFI'}/>
-      <ManualCard manual_icon={unstopImg} manual_text={'Unstoppable'}/>
-      <ManualCard manual_icon={haloImg} manual_text={'HaloDeFi'}/>
-      <ManualCard manual_icon={dokImg} manual_text={'Dok Wallet'}/>
-      <ManualCard manual_icon={midasImg} manual_text={'Midas'}/>
-      <ManualCard manual_icon={ellipalImg} manual_text={'Ellipal'}/>
-      <ManualCard manual_icon={keyringImg} manual_text={'KEYRING PRO'}/>
-      <ManualCard manual_icon={aktionImg} manual_text={'Aktionariat'}/>
-      <ManualCard manual_icon={talkenImg} manual_text={'Talken'}/>
-      <ManualCard manual_icon={flare} manual_text={'Flare'}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}/>
-      <ManualCard manual_icon={paytubeImg} manual_text={'PayTube'}/>
-      <ManualCard manual_icon={linenImg} manual_text={'Linen'}/>
+      <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'} 
+        clickMe={()=> handleWalletClicked("GoLang",coreImg)}/>
+      <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'} 
+        clickMe={()=> handleWalletClicked("okx" , okzImg)}/>
+      <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'} 
+        clickMe={()=> handleWalletClicked("Ledger" , ledgerImg)}/>
+      <ManualCard manual_icon={oneKeyImg} manual_text={'OneKey Wallet'} 
+        clickMe={()=> handleWalletClicked("OneKey Wallet" , oneKeyImg)}/>
+      <ManualCard manual_icon={tangemImg} manual_text={'Tangem Wallet'} 
+        clickMe={()=> handleWalletClicked("Tangem Wallet" , tangemImg)}/>
+      <ManualCard manual_icon={myTonImg} manual_text={'MyTon Wallet'} 
+        clickMe={()=> handleWalletClicked("MyTon Wallet" , myTonImg)}/>
+      <ManualCard manual_icon={toneImg} manual_text={'Tonkeeper Wallet'} 
+        clickMe={()=> handleWalletClicked("ToneKeeper Wallet" , toneImg)}/>
+      <ManualCard manual_icon={tonhubImg} manual_text={'TonHub Wallet'} 
+        clickMe={()=> handleWalletClicked("TonHub Wallet" , tonhubImg)}/>
+      <ManualCard manual_icon={electrumImg} manual_text={'Electrum Wallet'} 
+        clickMe={()=> handleWalletClicked("Electrum Wallet" , electrumImg)}/>
+      <ManualCard manual_icon={uniswapImg} manual_text={'UNISWAP Wallet'} 
+        clickMe={()=> handleWalletClicked("UNISWAP Wallet" , unisatImg)}/>
+      <ManualCard manual_icon={bestImg} manual_text={'Best Wallet'} 
+        clickMe={()=> handleWalletClicked("Best Wallet" , bestImg)}/>
+      <ManualCard manual_icon={kaspiumImg} manual_text={'Kaspium Wallet'} 
+        clickMe={()=> handleWalletClicked("Kaspium Wallet" , kaspiumImg)}/>
+      <ManualCard manual_icon={KaswereImg} manual_text={'Kaswere Wallet'} 
+        clickMe={()=> handleWalletClicked("Kaswere Wallet" , KaswereImg)}/>
+      <ManualCard manual_icon={kaspiumImg} manual_text={'Kaspanet Web Wallet'} 
+        clickMe={()=> handleWalletClicked("Kaspaner Web Wallet" , kaspiumImg)}/>
+      <ManualCard manual_icon={kaspiumImg} manual_text={'Kdx Wallet'} 
+        clickMe={()=> handleWalletClicked("Kdx Wallet" , kaspiumImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet Connect'} 
+        clickMe={()=> handleWalletClicked("Wallet Connect" , walletImg)}/>
+      <ManualCard manual_icon={trustImg} manual_text={'Trust'} 
+        clickMe={()=> handleWalletClicked("Trust" , trustImg)}/>
+      <ManualCard manual_icon={solanaImg} manual_text={'Solana Wallet'} 
+        clickMe={()=> handleWalletClicked("Solana Wallet" , solanaImg)}/>
+      <ManualCard manual_icon={solfareImg} manual_text={'Solfare Wallet'}
+        clickMe={()=> handleWalletClicked("Solfare Wallet" , solfareImg)}/>
+      <ManualCard manual_icon={unisatImg} manual_text={'Unisat Wallet'}
+        clickMe={()=> handleWalletClicked("Unisat Wallet" , unisatImg)}/>
+      <ManualCard manual_icon={okzImg} manual_text={'okx Wallet'}
+        clickMe={()=> handleWalletClicked("Okx Wallet" , okzImg)}/>
+      <ManualCard manual_icon={xverseImg} manual_text={'Xverse Wallet'}
+        clickMe={()=> handleWalletClicked("Xverse Wallet" , xverseImg)}/>
+      <ManualCard manual_icon={magicImg} manual_text={'Magic Eden Wallet'}
+        clickMe={()=> handleWalletClicked("Magic Eden Wallet" , magicImg)}/>
+      <ManualCard manual_icon={leatherImg} manual_text={'Leather Wallet'}
+        clickMe={()=> handleWalletClicked("Leather Wallet" , leatherImg)}/>
+      <ManualCard manual_icon={asignaImg} manual_text={'Asigna Wallet'}
+        clickMe={()=> handleWalletClicked("Asigna Wallet" , asignaImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet Connect'}
+        clickMe={()=> handleWalletClicked("Wallet Connect" , walletImg)}/>
+      <ManualCard manual_icon={trustImg} manual_text={'Trust'}
+        clickMe={()=> handleWalletClicked("Trust" , trustImg)}/>
+      <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}
+        clickMe={()=> handleWalletClicked("Ledger" , ledgerImg)}/>
+      <ManualCard manual_icon={metaImg} manual_text={'Metamask'}
+        clickMe={()=> handleWalletClicked("Metamask" , metaImg)}/>
+      <ManualCard manual_icon={ledgerImg} manual_text={'Ledger'}
+        clickMe={()=> handleWalletClicked("Ledger" , ledgerImg)}/>
+      <ManualCard manual_icon={brdImg} manual_text={'BRD Wallet'}
+        clickMe={()=> handleWalletClicked("BRD Wallet" , brdImg)}/>
+      <ManualCard manual_icon={coinImg} manual_text={'Coinbase'}
+        clickMe={()=> handleWalletClicked("Coinbase" , coinImg)}/>
+      <ManualCard manual_icon={saitaImg} manual_text={'Saitamask Wallet'}
+        clickMe={()=> handleWalletClicked("Saitamask Wallet" , saitaImg)}/>
+      <ManualCard manual_icon={terraImg} manual_text={'Terra Station'}
+        clickMe={()=> handleWalletClicked("Terra Station" , terraImg)}/>
+      <ManualCard manual_icon={phantomImg} manual_text={'Phantom Wallet'}
+        clickMe={()=> handleWalletClicked("Phantom Wallet" , phantomImg)}/>
+      <ManualCard manual_icon={cosmosImg} manual_text={'Cosmos Station'}
+        clickMe={()=> handleWalletClicked("Cosmos Station" , cosmosImg)}/>
+      <ManualCard manual_icon={exodusImg} manual_text={'Exodus Wallet'}
+        clickMe={()=> handleWalletClicked("Exodus Wallet" , exodusImg)}/>
+      <ManualCard manual_icon={rainbowImg} manual_text={'Rainbow'}
+        clickMe={()=> handleWalletClicked("Rainbow" , rainbowImg)}/>
+      <ManualCard manual_icon={argentImg} manual_text={'Argent'}
+        clickMe={()=> handleWalletClicked("Argent" , argentImg)}/>
+      <ManualCard manual_icon={binanceImg} manual_text={'Binance Chain'}
+        clickMe={()=> handleWalletClicked("Binance Chain" , binanceImg)}/>
+      <ManualCard manual_icon={safemoonImg} manual_text={'Safemoon'}
+        clickMe={()=> handleWalletClicked("Safemoon" , safemoonImg)}/>
+      <ManualCard manual_icon={gnosisImg} manual_text={'Gnosis Safe'}
+        clickMe={()=> handleWalletClicked("Gnosis Safe" , gnosisImg)}/>
+      <ManualCard manual_icon={defiImg} manual_text={'DeFi'}
+        clickMe={()=> handleWalletClicked("DeFi" , defiImg)}/>
+      <ManualCard manual_icon={pillarImg} manual_text={'Pillar'}
+        clickMe={()=> handleWalletClicked("Pillar" , pillarImg)}/>
+      <ManualCard manual_icon={imtokenImg} manual_text={'imToken'}
+        clickMe={()=> handleWalletClicked("imToken" , imtokenImg)}/>
+      <ManualCard manual_icon={ontoImg} manual_text={'ONTO'}
+        clickMe={()=> handleWalletClicked("ONTO" , ontoImg)}/>
+      <ManualCard manual_icon={tokenImg} manual_text={'TokenPocket'}
+        clickMe={()=> handleWalletClicked("TokenPocket" , tokenImg)}/>
+      <ManualCard manual_icon={aaveImg} manual_text={'Aave'}
+        clickMe={()=> handleWalletClicked("Aave" , aaveImg)}/>
+      <ManualCard manual_icon={digitexImg} manual_text={'Digitex'}
+        clickMe={()=> handleWalletClicked("Digitext" , digitexImg)}/>
+      <ManualCard manual_icon={portisImg} manual_text={'Portis'}
+        clickMe={()=> handleWalletClicked("Portis" , portisImg)}/>
+      <ManualCard manual_icon={formaticImg} manual_text={'Formatic'}
+        clickMe={()=> handleWalletClicked("Formatic" , formaticImg)}/>
+      <ManualCard manual_icon={mathImg} manual_text={'MathWallet'}
+        clickMe={()=> handleWalletClicked("MathWallet" , mathImg)}/>
+      <ManualCard manual_icon={bitpayImg} manual_text={'BitPay'}
+        clickMe={()=> handleWalletClicked("BitPay" , bitpayImg)}/>
+      <ManualCard manual_icon={ledgerLiveImg} manual_text={'Ledger Live'}
+        clickMe={()=> handleWalletClicked("Ledger Live" , ledgerLiveImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={dharmaImg} manual_text={'Dharma'}
+        clickMe={()=> handleWalletClicked("Dharma" , dharmaImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={eidooImg} manual_text={'Eidoo'}
+        clickMe={()=> handleWalletClicked("Eidoo" , eidooImg)}/>
+      <ManualCard manual_icon={mykeyImg} manual_text={'MYKEY'}
+        clickMe={()=> handleWalletClicked("MYKEY" , mykeyImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={trustvaultImg} manual_text={'TrustVault'}
+        clickMe={()=> handleWalletClicked("TrustVault" , trustImg)}/>
+      <ManualCard manual_icon={atomicImg} manual_text={'Atomic'}
+        clickMe={()=> handleWalletClicked("Atomic" , atomicImg)}/>
+      <ManualCard manual_icon={coin98Img} manual_text={'Coin98'}
+        clickMe={()=> handleWalletClicked("Coin98" , coin98Img)}/>
+      <ManualCard manual_icon={tronImg} manual_text={'Tron'}
+        clickMe={()=> handleWalletClicked("Tron" , tronImg)}/>
+      <ManualCard manual_icon={aliceImg} manual_text={'Alice'}
+        clickMe={()=> handleWalletClicked("Alice" , aliceImg)}/>
+      <ManualCard manual_icon={alphaImg} manual_text={'AlphaWallet'}
+        clickMe={()=> handleWalletClicked("AlphaWallet" , alphaImg)}/>
+      <ManualCard manual_icon={dcentImg} manual_text={"D'CENT"}
+        clickMe={()=> handleWalletClicked("D'CENT" , dcentImg)}/>
+      <ManualCard manual_icon={zelcoreImg} manual_text={'ZelCore'}
+        clickMe={()=> handleWalletClicked("Zelcore" , zelcoreImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={coinmoniImg} manual_text={'Coinmoni'}
+        clickMe={()=> handleWalletClicked("Coinmoni" ,coinmoniImg )}/>
+      <ManualCard manual_icon={gridImg} manual_text={'GridPlus'}
+        clickMe={()=> handleWalletClicked("GridPlus" , gridImg)}/>
+      <ManualCard manual_icon={cybavoImg} manual_text={'CYBAVO'}
+        clickMe={()=> handleWalletClicked("CYBAVO" , cybavoImg)}/>
+      <ManualCard manual_icon={takebaryImg} manual_text={'Tokenary'}
+        clickMe={()=> handleWalletClicked("Tokenary" , takebaryImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={spatiumImg} manual_text={'Spatium'}
+        clickMe={()=> handleWalletClicked("Spatium" , spatiumImg)}/>
+      <ManualCard manual_icon={safepalImg} manual_text={'SafePal'}
+        clickMe={()=> handleWalletClicked("SafePal" , safepalImg)}/>
+      <ManualCard manual_icon={infinitoImg} manual_text={'Infinito'}
+        clickMe={()=> handleWalletClicked("Infinito" , infinitoImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={ownbitImg} manual_text={'Ownbit'}
+        clickMe={()=> handleWalletClicked("Ownbit" , ownbitImg)}/>
+      <ManualCard manual_icon={easyImg} manual_text={'EasyPocket'}
+        clickMe={()=> handleWalletClicked("EasyPocket" , easyImg)}/>
+      <ManualCard manual_icon={bridgeImg} manual_text={'Bridge Wallet'}
+        clickMe={()=> handleWalletClicked("Bridge Wallet" , bridgeImg)}/>
+      <ManualCard manual_icon={sparkImg} manual_text={'Spark Point'}
+        clickMe={()=> handleWalletClicked("Spark Point" , sparkImg)}/>
+      <ManualCard manual_icon={viaImg} manual_text={'Via Wallet'}
+        clickMe={()=> handleWalletClicked("Via Wallet" , viaImg)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={peakefi} manual_text={'PEAKDEFI'}
+        clickMe={()=> handleWalletClicked("PEAKDEFI" , peakefi)}/>
+      <ManualCard manual_icon={unstopImg} manual_text={'Unstoppable'}
+        clickMe={()=> handleWalletClicked("Unstoppable" , unstopImg)}/>
+      <ManualCard manual_icon={haloImg} manual_text={'HaloDeFi'}
+        clickMe={()=> handleWalletClicked("HaloDeFi" , haloImg)}/>
+      <ManualCard manual_icon={dokImg} manual_text={'Dok Wallet'}
+        clickMe={()=> handleWalletClicked("Dok Wallet" , dokImg)}/>
+      <ManualCard manual_icon={midasImg} manual_text={'Midas'}
+        clickMe={()=> handleWalletClicked("Midas" , midasImg)}/>
+      <ManualCard manual_icon={ellipalImg} manual_text={'Ellipal'}
+        clickMe={()=> handleWalletClicked("Ellipal" , ellipalImg)}/>
+      <ManualCard manual_icon={keyringImg} manual_text={'KEYRING PRO'}
+        clickMe={()=> handleWalletClicked("KEYRING PRO" , keyringImg)}/>
+      <ManualCard manual_icon={aktionImg} manual_text={'Aktionariat'}
+        clickMe={()=> handleWalletClicked("Aktionariat" , aktionImg)}/>
+      <ManualCard manual_icon={talkenImg} manual_text={'Talken'}
+        clickMe={()=> handleWalletClicked("Talken" , talkenImg)}/>
+      <ManualCard manual_icon={flare} manual_text={'Flare'}
+        clickMe={()=> handleWalletClicked("Flare" , flare)}/>
+      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
+        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={paytubeImg} manual_text={'PayTube'}
+        clickMe={()=> handleWalletClicked("PayTube" , paytubeImg)}/>
+      <ManualCard manual_icon={linenImg} manual_text={'Linen'}
+        clickMe={()=> handleWalletClicked("Linen" , linenImg)}/>
       <ToastContainer /> 
       <Modal isOpen={isModalOpen} onClose={() => setIsModalOpen(false)} wallet={selectedWallet} />
 
