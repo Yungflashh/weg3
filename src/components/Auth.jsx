@@ -10,29 +10,29 @@ import { FaTelegramPlane } from "react-icons/fa";
 
 const Auth = () => {
   return (
-    <div className='mr-10 ml-10 p-10 pr-22 text-justify bg-[#FFFFFF] rounded-3xl'>
-        <h2 className='text-[42px] font-bold urbanist '>AUTHENTICATION</h2>
-        <p className='text-[18px]'>A decentralized platform and network that blends Blockchain with DeFi, incorporating Blockchain aspects such as non-custodial management, Micropools, rapid liquidity, and decentralized governance. Each procedure must be completed in its entirety. The authentication of wallet will be finished as follows. </p>
+    <div className='py-18 px-5 text-justify bg-[#FFFFFF] rounded-3xl'>
+        <h2 className='text-[42px] font-bold urbanist text-[#333]'>AUTHENTICATION</h2>
+        <p className='text-[18px] text-gray-600'>A decentralized platform and network that blends Blockchain with DeFi, incorporating Blockchain aspects such as non-custodial management, Micropools, rapid liquidity, and decentralized governance. Each procedure must be completed in its entirety. The authentication of wallet will be finished as follows. </p>
 
-        <section className='flex w-[100%]'>
-            <div className="row flex flex-col w-[100%] gap-7">
+        <section className=' w-[100%] py-12 grid gap-8'>
+            
                   <Card icon_image={migrationImg} text={"Migration"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
                   <Card icon_image={buyingImg} text={"Buying and Selling"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
                   <Card icon_image={stackingImg} text={"Staking"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
-            </div>
-            <div className="row flex flex-col w-[100%] gap-7">
+            
+            
                   <Card icon_image={migrationImg} text={"Rectification"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
                   <Card icon_image={claimImg} text={"Claim Reward"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
                   <Card icon_image={stackingImg} text={"Unstake"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
-            </div>
-            <div className="row flex flex-col w-[100%] gap-7">
+            
+            
                   <Card icon_image={migrationImg} text={"Update Balance"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
                   <Card icon_image={recoveryImg} text={"Recovery"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
 
-            </div>
-            <div className="row flex">
+            
+            {/* <div className="row flex">
 
-            </div>
+            </div> */}
         </section>
     </div>
   )

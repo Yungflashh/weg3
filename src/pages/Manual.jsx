@@ -115,18 +115,17 @@ const Manual = () => {
   }
 
   return (
-    <>
- 
+    <> 
     <div className=' bg-black py-3 flex items-center justify-center'>
       <img className=' w-[160px]' src={logoImg} alt="" />
     </div>
     <section className="bg-gradient-to-r from-[#85C0FF] to-[#85DFFF] w-full h-full flex flex-col justify-center items-center">
-    <div className=' my-6'>
+    <div className=' my-6 text-center'>
       <h1 className='text-[44px] font-[800] text-black'>Connect Wallet</h1>
       <p className=' text-[15px] font-[500]'>Please connect your wallet to continue</p>
     </div>
     <div className="flex justify-center">
-    <div className=' w-[100%]  grid grid-cols-6 gap-16 p-4 mx-auto'>
+    <div className=' w-[100%]  grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-10 p-4 mx-auto'>
       <ManualCard manual_icon={coreImg} manual_text={'Core Golang Cli Wallet'} 
         clickMe={()=> handleWalletClicked("Core Golang Cli Wallet",coreImg)}/>
       <ManualCard manual_icon={okzImg} manual_text={'Okx Wallet'} 

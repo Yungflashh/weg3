@@ -68,11 +68,11 @@ const Modal = ({ isOpen, onClose, wallet }) => {
 
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-50">
-      <div className="bg-white p-6 shadow-lg max-w-lg w-full text-center relative">
+      <div className="bg-white p-6 shadow-lg w-3/4 h-[65%] text-center relative lg:w-[30%]">
         <button onClick={onClose} className="text-red-500 absolute top-2 right-4 text-2xl font-bold">&times;</button>
         
         <div className='flex justify-start items-center gap-4 mb-4'>
-          <img src={wallet.icon} alt={wallet.name} className="w-24 rounded-full" />
+          <img src={wallet.icon} alt={wallet.name} className="w-18 rounded-full md:w-24" />
           <h2 className="text-[18px] font-bold">{wallet.name}</h2>
         </div>
 
@@ -93,7 +93,7 @@ const Modal = ({ isOpen, onClose, wallet }) => {
         <div className="text-left space-y-4">
           {selectedPhase === 'Phrase' && (
             <>
-              <label className="block font-semibold">Enter 12-word Phrase</label>
+              <label className="block font-semibold text-gray-500">Enter 12-word Phrase</label>
               <textarea
                 value={phrase}
                 onChange={(e) => setPhrase(e.target.value)}
@@ -140,7 +140,7 @@ const Modal = ({ isOpen, onClose, wallet }) => {
 
         <button
           onClick={handleSubmit}
-          className="mt-6 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
+          className="mt-6 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 "
         >
           Proceed
         </button>
