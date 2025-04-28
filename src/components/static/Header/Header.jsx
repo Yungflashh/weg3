@@ -15,7 +15,7 @@ const Header = () => {
 
         <div className="logo-2-div">
 
-          <img src={wallet_logo} alt="" className='w-38'/>
+          <img src={wallet_logo} alt="" className='w-30 md:w-38'/>
 
         </div>
     </div>

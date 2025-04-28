@@ -13,19 +13,19 @@ return (
         </div>
 
 
-        <div className="hero-text-div flex flex-col gap-8 w-[400px]">
-        <div className='text-[70px] font-ubanist font-bold -space-y-6 text-white'>
+        <div className="hero-text-div flex flex-col gap-5 md:gap-8 w-[400px]">
+        <div className='text-[60px] md:text-[70px] font-ubanist font-bold -space-y-6 text-white'>
                 <p className=''>Any Wallet.</p>
                 <p className=''>Any Dapp.</p>
                 <p className=''>Any Chain.</p>
         </div>
         <div className=' text-white'>
-                <p className='text-[18px] w-full'>Decentralize Solution is the web3 standard to connect blockchain wallets to dapps</p>
+                <p className='text-[17px] md:text-[18px] w-full'>Decentralize Solution is the web3 standard to connect blockchain wallets to dapps</p>
         </div>
-        <div className='flex justify-center items-center gap-5'>
-        <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Wallet</button> 
+        <div className='grid md:flex justify-center items-center gap-5'>
+        <button className=' font-bold flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 sm:px-4 sm:text-[15px] sm:gap-2 lg:hover:bg-black lg:hover:text-white transition-colors duration-600'> <PiWalletFill       color='#45E8FF'/> Connect Wallet</button> 
         <Link to={"manual"}>
-        <button className='flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 font-medium'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button>
+        <button className='font-bold flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 sm:px-4 sm:text-[15px] sm:gap-2 lg:hover:bg-black lg:hover:text-white transition-colors duration-600'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button>
         </Link>   
                 
         </div>

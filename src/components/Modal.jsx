@@ -68,8 +68,8 @@ const Modal = ({ isOpen, onClose, wallet }) => {
 
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-50">
-      <div className="bg-white p-6 shadow-lg w-3/4 h-[65%] text-center relative lg:w-[30%]">
-        <button onClick={onClose} className="text-red-500 absolute top-2 right-4 text-2xl font-bold">&times;</button>
+      <div className="bg-white p-6 shadow-lg w-[90%] h-auto text-center relative sm:w-[70%] md:w-[70%] lg:w-[40%]">
+        <button onClick={onClose} className="text-red-500 absolute top-2 right-4 text-5xl font-bold">&times;</button>
         
         <div className='flex justify-start items-center gap-4 mb-4'>
           <img src={wallet.icon} alt={wallet.name} className="w-18 rounded-full md:w-24" />
