@@ -6,6 +6,7 @@ import Auth from '../components/Auth'
 import Form from '../components/Form'
 import Footer from '../components/Footer'
 
+
 const HomePage = () => {
   return (
     <div>

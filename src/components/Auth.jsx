@@ -5,6 +5,7 @@ import buyingImg from "../assets/buying.jpg"
 import claimImg from "../assets/claim.jpg"
 import recoveryImg from "../assets/recovery.jpg"
 import stackingImg from "../assets/stacking.jpg"
+import { Link } from 'react-router-dom'
 
 import { FaTelegramPlane } from "react-icons/fa";
 
@@ -28,6 +29,11 @@ const Auth = () => {
             
                   <Card icon_image={migrationImg} text={"Update Balance"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
                   <Card icon_image={recoveryImg} text={"Recovery"} btn_icon={<FaTelegramPlane color='#fff'/>} btn_text={"Connect"}/>
+                  
+                  
+                  
+                  
+                  <Link to={'connecting'}><button className=' bg-red-700'>Connecting Page</button></Link>
 
             
             {/* <div className="row flex">
