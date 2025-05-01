@@ -23,9 +23,9 @@ return (
                 <p className='text-[17px] md:text-[18px] w-full'>Decentralize Solution is the web3 standard to connect blockchain wallets to dapps</p>
         </div>
         <div className='grid md:flex justify-center items-center gap-5'>
-        <Link to={'modal_two'}>
+       
         <button className=' font-bold flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 sm:px-4 sm:text-[15px] sm:gap-2 lg:hover:bg-black lg:hover:text-white transition-colors duration-600'> <PiWalletFill       color='#45E8FF'/> Connect Wallet</button> 
-        </Link>
+       
         <Link to={"manual"}>
         <button className='font-bold flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 sm:px-4 sm:text-[15px] sm:gap-2 lg:hover:bg-black lg:hover:text-white transition-colors duration-600'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button>
         </Link>   

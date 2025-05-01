@@ -82,6 +82,17 @@ import talkenImg from "../assets/manualIcons/talken.png"
 import flare from "../assets/manualIcons/flare.png"
 import paytubeImg from "../assets/manualIcons/paytube.png"
 import linenImg from "../assets/manualIcons/linen.jpeg"
+import ethImg from "../assets/eth.jpg"
+import oneinch from "../assets/1inch.jpg"
+import authereum from "../assets/authereum.png"
+import Huobi from "../assets/Huobi.png"
+import LoopringImg from "../assets/Loopring.png"
+import nashImg from "../assets/nashImg.png"
+import wallet_ioImg from "../assets/wallet.ioImg.png"
+import TorusImg from "../assets/TorusImg.png"
+import BitkeepImg from "../assets/BitkeepImg.png"
+import visionImg from "../assets/visionImg.jpg"
+import kyberswapImg from "../assets/kyberswapImg.jpg"
 import logoImg from "../assets/dwallet_logo_black.jpg"
 import Modal from '../components/Modal';
 import { ToastContainer } from 'react-toastify';
@@ -234,24 +245,24 @@ const Manual = () => {
         clickMe={()=> handleWalletClicked("BitPay" , bitpayImg)}/>
       <ManualCard manual_icon={ledgerLiveImg} manual_text={'Ledger Live'}
         clickMe={()=> handleWalletClicked("Ledger Live" , ledgerLiveImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={ethImg} manual_text={'WallETH'}
+        clickMe={()=> handleWalletClicked("Wallet" ,ethImg )}/>
+      <ManualCard manual_icon={authereum} manual_text={'Authereum'}
+        clickMe={()=> handleWalletClicked("Wallet" , authereum)}/>
       <ManualCard manual_icon={dharmaImg} manual_text={'Dharma'}
         clickMe={()=> handleWalletClicked("Dharma" , dharmaImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={oneinch} manual_text={'1inch Wallet'}
+        clickMe={()=> handleWalletClicked("1inch Wallet" ,oneinch )}/>
+      <ManualCard manual_icon={Huobi} manual_text={'Huobi'}
+        clickMe={()=> handleWalletClicked("Huobi" ,Huobi )}/>
       <ManualCard manual_icon={eidooImg} manual_text={'Eidoo'}
         clickMe={()=> handleWalletClicked("Eidoo" , eidooImg)}/>
       <ManualCard manual_icon={mykeyImg} manual_text={'MYKEY'}
         clickMe={()=> handleWalletClicked("MYKEY" , mykeyImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={LoopringImg} manual_text={'Loopring'}
+        clickMe={()=> handleWalletClicked("Loopring" , LoopringImg)}/>
       <ManualCard manual_icon={trustvaultImg} manual_text={'TrustVault'}
-        clickMe={()=> handleWalletClicked("TrustVault" , trustImg)}/>
+        clickMe={()=> handleWalletClicked("TrustVault" , trustvaultImg)}/>
       <ManualCard manual_icon={atomicImg} manual_text={'Atomic'}
         clickMe={()=> handleWalletClicked("Atomic" , atomicImg)}/>
       <ManualCard manual_icon={coin98Img} manual_text={'Coin98'}
@@ -266,8 +277,8 @@ const Manual = () => {
         clickMe={()=> handleWalletClicked("D'CENT" , dcentImg)}/>
       <ManualCard manual_icon={zelcoreImg} manual_text={'ZelCore'}
         clickMe={()=> handleWalletClicked("Zelcore" , zelcoreImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={nashImg} manual_text={'Nash'}
+        clickMe={()=> handleWalletClicked("Nash" ,nashImg )}/>
       <ManualCard manual_icon={coinmoniImg} manual_text={'Coinmoni'}
         clickMe={()=> handleWalletClicked("Coinmoni" ,coinmoniImg )}/>
       <ManualCard manual_icon={gridImg} manual_text={'GridPlus'}
@@ -276,16 +287,16 @@ const Manual = () => {
         clickMe={()=> handleWalletClicked("CYBAVO" , cybavoImg)}/>
       <ManualCard manual_icon={takebaryImg} manual_text={'Tokenary'}
         clickMe={()=> handleWalletClicked("Tokenary" , takebaryImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={TorusImg} manual_text={'Torus'}
+        clickMe={()=> handleWalletClicked("Torus" , TorusImg)}/>
       <ManualCard manual_icon={spatiumImg} manual_text={'Spatium'}
         clickMe={()=> handleWalletClicked("Spatium" , spatiumImg)}/>
       <ManualCard manual_icon={safepalImg} manual_text={'SafePal'}
         clickMe={()=> handleWalletClicked("SafePal" , safepalImg)}/>
       <ManualCard manual_icon={infinitoImg} manual_text={'Infinito'}
         clickMe={()=> handleWalletClicked("Infinito" , infinitoImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={wallet_ioImg} manual_text={'wallet.io'}
+        clickMe={()=> handleWalletClicked("wallet.io" ,wallet.ioImg )}/>
       <ManualCard manual_icon={ownbitImg} manual_text={'Ownbit'}
         clickMe={()=> handleWalletClicked("Ownbit" , ownbitImg)}/>
       <ManualCard manual_icon={easyImg} manual_text={'EasyPocket'}
@@ -296,10 +307,10 @@ const Manual = () => {
         clickMe={()=> handleWalletClicked("Spark Point" , sparkImg)}/>
       <ManualCard manual_icon={viaImg} manual_text={'Via Wallet'}
         clickMe={()=> handleWalletClicked("Via Wallet" , viaImg)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={BitkeepImg} manual_text={'Bitkeep'}
+        clickMe={()=> handleWalletClicked("Bitkeep" , BitkeepImg )}/>
+      <ManualCard manual_icon={visionImg} manual_text={'Vision'}
+        clickMe={()=> handleWalletClicked("Vision" , visionImg )}/>
       <ManualCard manual_icon={peakefi} manual_text={'PEAKDEFI'}
         clickMe={()=> handleWalletClicked("PEAKDEFI" , peakefi)}/>
       <ManualCard manual_icon={unstopImg} manual_text={'Unstoppable'}
@@ -320,8 +331,8 @@ const Manual = () => {
         clickMe={()=> handleWalletClicked("Talken" , talkenImg)}/>
       <ManualCard manual_icon={flare} manual_text={'Flare'}
         clickMe={()=> handleWalletClicked("Flare" , flare)}/>
-      <ManualCard manual_icon={walletImg} manual_text={'Wallet'}
-        clickMe={()=> handleWalletClicked("Wallet" , )}/>
+      <ManualCard manual_icon={kyberswapImg} manual_text={'Kyberswap'}
+        clickMe={()=> handleWalletClicked("Kyberswap" , kyberswapImg)}/>
       <ManualCard manual_icon={paytubeImg} manual_text={'PayTube'}
         clickMe={()=> handleWalletClicked("PayTube" , paytubeImg)}/>
       <ManualCard manual_icon={linenImg} manual_text={'Linen'}
