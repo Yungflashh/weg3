@@ -25,7 +25,7 @@ return (
         <div className='grid md:flex justify-center items-center gap-5'>
        
         <button className=' font-bold flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 sm:px-4 sm:text-[15px] sm:gap-2 lg:hover:bg-black lg:hover:text-white transition-colors duration-600'> <PiWalletFill       color='#45E8FF'/> Connect Wallet</button> 
-       
+        </Link>
         <Link to={"manual"}>
         <button className='font-bold flex justify-center items-center bg-white px-6 py-3 rounded-3xl gap-2 sm:px-4 sm:text-[15px] sm:gap-2 lg:hover:bg-black lg:hover:text-white transition-colors duration-600'> <PiWalletFill       color='#45E8FF'/> Connect Manually</button>
         </Link>   
