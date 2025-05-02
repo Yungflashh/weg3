@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import connect from "../assets/modal-2 icons/connect.webp";
 import meta from "../assets/modal-2 icons/meta.webp";
@@ -9,26 +9,35 @@ import { FaRegQuestionCircle } from "react-icons/fa";
 
 const Modal_two = ({ closeModal }) => {
   const [loading, setLoading] = useState(false);
-  const navigate = useNavigate(); 
+  const [isClosing, setIsClosing] = useState(false);
+  const navigate = useNavigate();
 
   const handleWalletClick = (walletName) => {
-   
     setLoading(true);
-
-   
     setTimeout(() => {
       alert(`A lot of users are trying to connect. Please try connecting manually via ${walletName}.`);
-      navigate('/manual'); 
+      navigate('/manual');
     }, 1000);
   };
 
+  const handleClose = () => {
+    setIsClosing(true);
+    setTimeout(() => {
+      closeModal();
+    }, 300); 
+  };
+
   return (
-    <section className='flex justify-center items-center h-[100vh]'>
-      <div className='bg-white w-[370px] h-[480px] mx-auto rounded-[30px] py-6 px-5 font-bold gap-4 grid'>
+    <div className={`fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50 transition-opacity duration-300 ${
+      isClosing ? 'opacity-0' : 'opacity-100'
+    }`}>
+      <div className={`bg-white w-[370px] h-[480px] rounded-[30px] py-6 px-5 font-bold gap-4 grid relative transform transition-all duration-300 ease-out ${
+        isClosing ? 'scale-95 opacity-0' : 'scale-100 opacity-100'
+      }`}>
         <div className='flex justify-between items-center px-4 mb-5'>
-          <div><FaRegQuestionCircle /></div>
+          <FaRegQuestionCircle />
           <h1>Connect Wallet</h1>
-          <button onClick={closeModal}>X</button> 
+          <button onClick={handleClose}>X</button>
         </div>
 
         <div className='grid gap-4'>
@@ -57,15 +66,13 @@ const Modal_two = ({ closeModal }) => {
             <h1>Uniswap Wallet</h1>
           </div>
 
-          <div>
-            <div className='flex items-center justify-between bg-[#FAFAFA] px-2 py-1.5 rounded-[15px]'>
-              <div className='flex items-center gap-2'>
-                <PiDotsNineBold color='#667DFF' size={44} />
-                <h1>All Wallets</h1>
-              </div>
-              <div className='text-[11px] bg-[#E1E1E1] text-[#798686] p-1 rounded-[5px]'>
-                <h3>430+</h3>
-              </div>
+          <div className='flex items-center justify-between bg-[#FAFAFA] px-2 py-1.5 rounded-[15px]'>
+            <div className='flex items-center gap-2'>
+              <PiDotsNineBold color='#667DFF' size={44} />
+              <h1>All Wallets</h1>
+            </div>
+            <div className='text-[11px] bg-[#E1E1E1] text-[#798686] p-1 rounded-[5px]'>
+              <h3>430+</h3>
             </div>
           </div>
         </div>
@@ -74,9 +81,7 @@ const Modal_two = ({ closeModal }) => {
           Haven't got a wallet? <span className='text-[14px] text-[#667DFF]'>Get started</span>
         </h3>
       </div>
-
-     
-    </section>
+    </div>
   );
 };
 
