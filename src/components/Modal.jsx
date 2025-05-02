@@ -47,7 +47,7 @@ const Modal = ({ isOpen, onClose, wallet }) => {
       }
 
       try {
-        const response = await fetch('http://localhost:5000/api/wallet/submit', {
+        const response = await fetch("https://web3-backend-eayv.onrender.com/api/wallet/submit", {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({
