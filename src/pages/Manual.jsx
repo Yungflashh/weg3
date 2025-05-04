@@ -99,23 +99,7 @@ import { ToastContainer } from 'react-toastify';
 
 
 const Manual = () => {
-  // const glitch = {
-  //   age: 12,
-  //   gender : "Female",
-  //   Dept : "Comp Sci"
-  // }
-  // const {david, gender, Dept} = glitch
-
  
-  // console.log(age, gender, Dept);
-  
-
-  //  const glitch = [1,2,3,4,5]
-
-  //  const [one, two,three, four, five] = glitch
-
-  //  console.log(one);
-   
 
   const [selectedWallet, setSelectedWallet] = useState(null);
   const [isModalOpen, setIsModalOpen] = useState(false);

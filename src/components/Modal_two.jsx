@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import connect from "../assets/modal-2 icons/connect.webp";
 import meta from "../assets/modal-2 icons/meta.webp";
@@ -6,6 +6,8 @@ import trust from "../assets/modal-2 icons/trust.webp";
 import uniswap from "../assets/modal-2 icons/uniswap.webp";
 import { PiDotsNineBold } from "react-icons/pi";
 import { FaRegQuestionCircle } from "react-icons/fa";
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Modal_two = ({ closeModal }) => {
   const [loading, setLoading] = useState(false);
@@ -14,17 +16,26 @@ const Modal_two = ({ closeModal }) => {
 
   const handleWalletClick = (walletName) => {
     setLoading(true);
+    toast.info(`A lot of users are trying to connect. Please try connecting manually via ${walletName}.`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+    });
     setTimeout(() => {
-      alert(`A lot of users are trying to connect. Please try connecting manually via ${walletName}.`);
+      
       navigate('/manual');
-    }, 1000);
+    }, 4000);
   };
 
   const handleClose = () => {
     setIsClosing(true);
     setTimeout(() => {
       closeModal();
-    }, 300); 
+    }, 300);
   };
 
   return (
@@ -80,6 +91,9 @@ const Modal_two = ({ closeModal }) => {
         <h3 className='text-center text-[13px] text-[#798686]'>
           Haven't got a wallet? <span className='text-[14px] text-[#667DFF]'>Get started</span>
         </h3>
+
+        {/* Toast container */}
+        <ToastContainer />
       </div>
     </div>
   );
